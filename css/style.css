@@ -1,0 +1,50 @@
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size:28px;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size:24px;
+  font-weight: 900;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+body {
+  background-color: pink;
+}
+
+header {
+  margin:0;
+  padding:0;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+header img {
+  width: 100%;
+}
+
+div.container {
+  width: 520px;
+  position: relative;
+  left:600px;
+  z-index:2;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;;
+}
+
+.gallery img {
+    width:90%;
+}
