@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+    let xPos = 200;
+    let yPos = 200;
+    let r = 240;
+    let g = 60;
+    let b = 10;
+    let angle = 0;
+    let sc = 1;
+
+    function setup() {
+      createCanvas(1000, 1000);
+      angleMode(DEGREES);
+    }
+
+    function draw() {
+      background(240);
+      translate(xPos, yPos);
+      scale(sc);
+
+      fill(r,g,b);
+
+      /* Rectangle 1 */
+      noStroke();
+      rect(100, 100, 100, 400);
+
+      /* Rectangle 2 */
+      noStroke();
+      square(200, 250, 100);
+
+      /* Rectangle 3 */
+      noStroke();
+      square(300, 250, 100);
+
+      /* Rectangle 1 */
+      noStroke();
+      rect(400, 100, 100, 400);
+    }
+
+    function mousePressed() {
+      sc = sc+0.1;
+    }
+
+    </script>
+  </head>
+  <body>
+    <h2>Scale - Click on the canvas to resize the letter</h2>
+  </body>
+</html>

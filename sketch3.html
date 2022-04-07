@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    function setup() {
+      createCanvas(1000, 1000);
+      background(220);
+    }
+
+    function draw() {
+
+      /* Rectangle 1 */
+      noStroke();
+      fill(240,60,10);
+      rect(100, 100, 100, 400);
+
+      /* Rectangle 2 */
+      noStroke();
+      fill(240,60,10);
+      square(200, 250, 100);
+
+      /* Rectangle 3 */
+      noStroke();
+      fill(240,60,10);
+      square(300, 250, 100);
+
+      /* Rectangle 4 */
+      noStroke();
+      fill(240,60,10);
+      rect(400, 100, 100, 400);
+
+      /* Circle to paint */
+      noStroke();
+      fill(10,50);
+      circle(mouseX, mouseY, 50);
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
