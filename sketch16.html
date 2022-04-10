@@ -7,29 +7,39 @@
     <title>HTML 5 Boilerplate</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+    let x = 0;
+    let speed = 10;
+
     function setup() {
-      createCanvas(1000, 1000);
+      let canvas = createCanvas(1000, 1000);
     }
 
     function draw() {
-      background(220);
+      background(240);
 
-      /* Rectangle 1 */
       noStroke();
-      fill(240,60,10);
-      rect(100, 100, 100, 400);
+      fill(240,10,50);
 
-      /* Rectangle 2 */
-      square(200, 250, 100);
+      rect(x, 0, 50, 250);
+      square(x+50, 100, 50);
+      square(x+100, 100, 50);
+      rect(x+150, 0, 50, 250);
 
-      /* Rectangle 3 */
-      square(300, 250, 100);
+      x+= speed;
 
-      /* Rectangle 1 */
-      rect(400, 100, 100, 400);
+        if( x < 0 ){
+          speed = 10;
+        }
+
+        if ( x >= width - 250 ) {
+          speed = -10;
+        }
     }
+
     </script>
   </head>
   <body>
+    <h2>Bouncing "H"</h2>
   </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+
+    let y = 0;
+    let rC = 0;
+    let gC = 0;
+    let bC = 0;
+
+    function setup() {
+      let canvas = createCanvas(1000, 1000);
+    }
+
+    function draw() {
+      background(240);
+
+      /* LOOP */
+      for (let x = 0; x <= width; x++){
+        let c = random(0, 255);
+        noStroke();
+        fill(c+240,c-10,c+50);
+
+        translate(x*c,y+c);
+        rect(0, 300, 50, 250);
+        square(50, 400, 50);
+        square(100, 400, 50);
+        rect(150, 300, 50, 250);
+
+        rect(300, 0, 50, 250);
+        square(250, 400, 50);
+        square(300, 400, 50);
+        rect(200, 0, 50, 250);
+
+      }
+    }
+
+    </script>
+  </head>
+  <body>
+    <h2>Using Transform (Translate) and Random to draw shapes randomly</h2>
+  </body>
+</html>

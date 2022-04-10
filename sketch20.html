@@ -7,29 +7,46 @@
     <title>HTML 5 Boilerplate</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
     function setup() {
       createCanvas(1000, 1000);
+      background(220);
     }
 
     function draw() {
-      background(220);
+
+      variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
+
+      function variableEllipse(x, y, px, py) {
+        let speed = abs(x - px) + abs(y - py);
+        /*stroke(speed);*/
+        noStroke();
+        rect(x, y, speed, speed);
+      }
+
+      translate(200,200);
 
       /* Rectangle 1 */
-      noStroke();
       fill(240,60,10);
+
       rect(100, 100, 100, 400);
 
       /* Rectangle 2 */
+      noStroke();
       square(200, 250, 100);
 
       /* Rectangle 3 */
+      noStroke();
       square(300, 250, 100);
 
       /* Rectangle 1 */
+      noStroke();
       rect(400, 100, 100, 400);
     }
+
     </script>
   </head>
   <body>
+    <h2>Shapes random generation</h2>
   </body>
 </html>

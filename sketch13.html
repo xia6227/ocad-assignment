@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    function setup() {
+      let canvas = createCanvas(1000, 1000);
+    }
+
+    function draw() {
+      background(240);
+
+      var x = 0;
+
+      /* LOOP 1 */
+      while( x <= width ) {
+        noStroke();
+        fill(240,60,10);
+
+        rect(x, 0, 50, 250);
+        square(x+50, 100, 50);
+        square(x+100, 100, 50);
+        rect(x+150, 0, 50, 250);
+
+        x+= 260;
+      }
+
+      /* LOOP 2 */
+      for (var x = 0; x <= width; x+= 260){
+        noStroke();
+        fill(240,0,50);
+
+        rect(x, 300, 50, 250);
+        square(x+50, 400, 50);
+        square(x+100, 400, 50);
+        rect(x+150, 300, 50, 250);
+
+      }
+
+    }
+
+    </script>
+  </head>
+  <body>
+    <h2>Using conditional loop to draw the letter H (For and While)</h2>
+  </body>
+</html>

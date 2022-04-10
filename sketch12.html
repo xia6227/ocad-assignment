@@ -8,28 +8,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     function setup() {
-      createCanvas(1000, 1000);
+      let canvas = createCanvas(1000, 1000);
     }
 
     function draw() {
-      background(220);
+      background(240);
 
-      /* Rectangle 1 */
-      noStroke();
-      fill(240,60,10);
-      rect(100, 100, 100, 400);
+      var x = 0;
+      var y = 0;
 
-      /* Rectangle 2 */
-      square(200, 250, 100);
 
-      /* Rectangle 3 */
-      square(300, 250, 100);
+      while( x <= width){
+        noStroke();
+        fill(240,60,10);
 
-      /* Rectangle 1 */
-      rect(400, 100, 100, 400);
+        rect(x, y, 50, 250);
+        square(x+50, y+100, 50);
+        square(x+100, y+100, 50);
+        rect(x+150, y, 50, 250);
+
+        x = x + 260;
+
+      }
     }
+
     </script>
   </head>
   <body>
+    <h2>Using conditional loop to draw the letter H</h2>
   </body>
 </html>

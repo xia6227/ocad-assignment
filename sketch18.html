@@ -7,16 +7,27 @@
     <title>HTML 5 Boilerplate</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+    let deck = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    let position = 0;
+    let rC = 240;
+    let gC = 60;
+    let bC = 10;
+
     function setup() {
       createCanvas(1000, 1000);
+      noLoop();
+      noStroke();
+      deck = shuffle(deck);
+      noLoop();
     }
 
     function draw() {
       background(220);
 
-      /* Rectangle 1 */
-      noStroke();
       fill(240,60,10);
+
+      /* Rectangle 1 */
       rect(100, 100, 100, 400);
 
       /* Rectangle 2 */
@@ -27,9 +38,39 @@
 
       /* Rectangle 1 */
       rect(400, 100, 100, 400);
+
+
+      let x = 0;
+        for (x = 0; x < width; x += 20) {
+          let buildingHeight = floor(pickHeight()) * 15;
+          rect(x, height * 0.9 - buildingHeight, 20, buildingHeight);
+          let c = random(0, 255);
+        }
+
+        fill(240,60,10);
+        rect(0, height * 0.9, width, height * 0.5);
     }
+
+    function pickHeight() {
+      return random(0, 20)*2.5;
+    }
+
+    function valueFromDeck() {
+      let v = deck[position];
+
+      position++;
+
+      if (position > 20) {
+        deck = shuffle(deck);
+        position = 0;
+      }
+
+      return v;
+    }
+
     </script>
   </head>
   <body>
+    <h2>Refresh the browser</h2>
   </body>
 </html>
