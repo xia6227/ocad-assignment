@@ -68,8 +68,56 @@ ul li a {
   background-position: bottom;
 }
 
-.container.links h2 {
+.container.links h2,
+.container.sources h2 {
   color:#fff;
+}
+
+.container.video,
+.container.sources {
+  padding:50px;
+}
+
+.container.video {
+  background-color: #bbbbbb;
+}
+
+.container.responses .row {
+  padding:0 50px;
+}
+
+.response {
+  padding:0 50px 0 50px;
+}
+
+.container.sources {
+  margin:0;
+  padding:0;
+}
+
+.container.sources .row {
+  padding:50px;
+  margin:0;
+  display: block;
+  width: 100%;
+  background-image: url(../images/library.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container.sources ul {
+  padding:20px 50px;
+}
+
+.container .player {
+  display: block;
+  margin:0 auto;
+}
+
+video {
+  width:90%;
+  height:auto;
+  margin:0 auto;
 }
 
 .row {
